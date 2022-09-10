@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="db_photoexpressModelStoreContainer" CdmEntityContainer="db_photoexpressEntities">
+    <EntitySetMapping Name="EVENTO">
+      <EntityTypeMapping TypeName="db_photoexpressModel.EVENTO">
+        <MappingFragment StoreEntitySet="EVENTO">
+          <ScalarProperty Name="Id_evento" ColumnName="Id_evento" />
+          <ScalarProperty Name="nombre_institucion" ColumnName="nombre_institucion" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="cantidad_alumnos" ColumnName="cantidad_alumnos" />
+          <ScalarProperty Name="hora_inicio" ColumnName="hora_inicio" />
+          <ScalarProperty Name="tipo_servicio" ColumnName="tipo_servicio" />
+          <ScalarProperty Name="valor_servicio" ColumnName="valor_servicio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

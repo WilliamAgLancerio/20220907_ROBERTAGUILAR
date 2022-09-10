@@ -5,30 +5,30 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>LISTA DE EVENTOS</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("CREAR EVENTO", "Create")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.nombre_institucion)
+            NOMBRE DE LA INSTITUCIÓN.
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.direccion)
+            DIRECCIÓN
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.cantidad_alumnos)
+           CANTIDAD DE ALUMNOS.
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.hora_inicio)
+            HORA DE INICIO.
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.tipo_servicio)
+            TIPO DE SERVICIO.
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.valor_servicio)
+            VALOR DEL SERVICIO.
         </th>
         <th></th>
     </tr>
@@ -54,9 +54,9 @@
             @Html.DisplayFor(modelItem => item.valor_servicio)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id_evento }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id_evento }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id_evento })
+            @Html.ActionLink("Editar", "Edit", new { id=item.Id_evento }) |
+            @Html.ActionLink("Detalles", "Details", new { id=item.Id_evento }) |
+            @Html.ActionLink("Eliminar", "Delete", new { id=item.Id_evento })
         </td>
     </tr>
 }

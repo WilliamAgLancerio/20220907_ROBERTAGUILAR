@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="db_photoexpressModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="EVENTO">
+    <Key>
+      <PropertyRef Name="Id_evento" />
+    </Key>
+    <Property Name="Id_evento" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="nombre_institucion" Type="varchar" MaxLength="70" />
+    <Property Name="direccion" Type="varchar" MaxLength="100" />
+    <Property Name="cantidad_alumnos" Type="int" />
+    <Property Name="hora_inicio" Type="time" Precision="7" />
+    <Property Name="tipo_servicio" Type="varchar" MaxLength="50" />
+    <Property Name="valor_servicio" Type="int" />
+  </EntityType>
+  <EntityContainer Name="db_photoexpressModelStoreContainer">
+    <EntitySet Name="EVENTO" EntityType="Self.EVENTO" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
