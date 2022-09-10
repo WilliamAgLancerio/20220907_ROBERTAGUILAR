@@ -1,0 +1,64 @@
+﻿@model IEnumerable<_20220907_ROBERT_AGUILAR.EVENTO>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.nombre_institucion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.direccion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cantidad_alumnos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.hora_inicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tipo_servicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.valor_servicio)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombre_institucion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.direccion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cantidad_alumnos)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.hora_inicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tipo_servicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.valor_servicio)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id_evento }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id_evento }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id_evento })
+        </td>
+    </tr>
+}
+
+</table>
